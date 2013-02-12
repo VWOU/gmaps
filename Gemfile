@@ -25,6 +25,9 @@ gem 'jquery-rails'
 # Gmaps4Rails
 gem 'gmaps4rails'
 
+# Carousel
+gem 'carousel'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
