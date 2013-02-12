@@ -1,0 +1,874 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCharacters (20130212103920)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "characters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "longitude" float, "latitude" float, "gmaps" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130212103920')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-02-12 11:41:37 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:41:49 +0100
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (0.1ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered characters/index.html.erb within layouts/application (38.5ms)
+Compiled characters.css  (10ms)  (pid 11074)
+Compiled gmaps4rails.css  (0ms)  (pid 11074)
+Compiled scaffolds.css  (26ms)  (pid 11074)
+Compiled application.css  (97ms)  (pid 11074)
+Compiled jquery.js  (2ms)  (pid 11074)
+Compiled jquery_ujs.js  (0ms)  (pid 11074)
+Compiled characters.js  (122ms)  (pid 11074)
+Compiled gmaps4rails/gmaps4rails.base.js  (210ms)  (pid 11074)
+Compiled gmaps4rails/gmaps4rails.bing.js  (168ms)  (pid 11074)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (209ms)  (pid 11074)
+Compiled gmaps4rails/gmaps4rails.mapquest.js  (163ms)  (pid 11074)
+Compiled gmaps4rails/gmaps4rails.openlayers.js  (188ms)  (pid 11074)
+Compiled application.js  (1250ms)  (pid 11074)
+Completed 200 OK in 1624ms (Views: 1526.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /application.css - 200 OK (53ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /characters.css - 200 OK (4ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /jquery.js - 200 OK (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /characters.js - 200 OK (7ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 200 OK (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 200 OK (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 200 OK (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 200 OK (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:51 +0100
+Served asset /application.js - 200 OK (54ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2013-02-12 11:41:52 +0100
+Processing by CharactersController#new as HTML
+  Rendered characters/_form.html.erb (13.5ms)
+  Rendered characters/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 45ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:41:53 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (2.0ms)[0m  SELECT "characters".* FROM "characters" 
+  Rendered characters/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 59.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /characters.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered characters/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:46 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters" 
+  Rendered characters/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (3.1ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered characters/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters" 
+  Rendered characters/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:51:47 +0100
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered characters/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /characters.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:51:48 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.7ms)[0m  SELECT "characters".* FROM "characters" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered /home/vincent/.rvm/gems/ruby-1.9.3-p327/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (2.1ms)
+  Rendered characters/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /characters.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (41ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:55:57 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Processing by CharactersController#new as HTML
+  Rendered characters/_form.html.erb (5.4ms)
+  Rendered characters/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 33ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:56:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:56:10 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/characters" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Processing by CharactersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/aNgjRMJUBAycvFCU2Hxixf97XMRZGRd5UZa5RNmEEc=", "character"=>{"name"=>"Work", "address"=>"Desguinlei 6", "longitude"=>"4.41208", "latitude"=>"51.19322", "gmaps"=>"1"}, "commit"=>"Create Character"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (45.2ms)[0m  [1mINSERT INTO "characters" ("address", "created_at", "gmaps", "latitude", "longitude", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Desguinlei 6"], ["created_at", Tue, 12 Feb 2013 10:58:28 UTC +00:00], ["gmaps", true], ["latitude", 51.19322], ["longitude", 4.41208], ["name", "Work"], ["updated_at", Tue, 12 Feb 2013 10:58:28 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/characters/1
+Completed 302 Found in 59ms (ActiveRecord: 47.4ms)
+
+
+Started GET "/characters/1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered characters/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:28 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (11.3ms)[0m  SELECT "characters".* FROM "characters" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered /home/vincent/.rvm/gems/ruby-1.9.3-p327/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.3ms)
+  Rendered characters/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 34ms (Views: 16.2ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /jquery.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 11:58:31 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Processing by CharactersController#index as HTML
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT "characters".* FROM "characters" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "characters".* FROM "characters" [0m
+  Rendered /home/vincent/.rvm/gems/ruby-1.9.3-p327/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.6ms)
+  Rendered characters/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Served asset /characters.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:28 +0100
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 13:25:29 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/characters/1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered characters/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/characters.css?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /characters.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/characters.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /characters.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-12 13:30:57 +0100
+Served asset /application.js - 304 Not Modified (2ms)
